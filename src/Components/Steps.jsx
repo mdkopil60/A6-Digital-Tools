@@ -8,7 +8,7 @@ export default function Steps() {
 
                 {/* Step 1 */}
                 <div className="p-6 shadow rounded-xl flex flex-col items-center">
-                    <img src="/src/assets/user.png" className="w-16 h-16 mb-4" alt="user" />
+                    <img src="../src/assets/user.png" className="w-16 h-16 mb-4" alt="user" />
                     <h3 className="text-2xl font-bold">Create Account</h3>
                     <p className="text-gray-600 mt-4">
                         Sign up for free in seconds. No credit card <br /> required to get started.
@@ -17,7 +17,7 @@ export default function Steps() {
 
                 {/* Step 2 */}
                 <div className="p-6 shadow rounded-xl flex flex-col items-center">
-                    <img src="/src/assets/package.png" className="w-16 h-16 mb-4" alt="package" />
+                    <img src="../src/assets/package.png" className="w-16 h-16 mb-4" alt="package" />
                     <h3 className="text-2xl font-bold">Choose Products</h3>
                     <p className="text-gray-600 mt-4">
                         Browse our catalog and select the tools <br /> that fit your needs.
@@ -26,7 +26,7 @@ export default function Steps() {
 
                 {/* Step 3 */}
                 <div className="p-6 shadow rounded-xl flex flex-col items-center">
-                    <img src="/src/assets/rocket.png" className="w-16 h-16 mb-4" alt="rocket" />
+                    <img src="../src/assets/rocket.png" className="w-16 h-16 mb-4" alt="rocket" />
                     <h3 className="text-2xl font-bold">Start Creating</h3>
                     <p className="text-gray-600 mt-4">
                         Download and start using your premium <br /> tools immediately.

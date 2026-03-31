@@ -17,7 +17,7 @@ const Cart = ({ cart, setCart }) => {
     if (cart.length === 0) {
         return (
             <div className="mt-10 text-center text-gray-500">
-                <img className="mx-auto w-60 h-60" src="/src/assets/cart-arrow-down.png" alt="" />
+                <img className="mx-auto w-60 h-60" src="../src/assets/cart-arrow-down.png" alt="" />
                 <h3 className="text-center text-2xl">Your cart is empty</h3>
             </div>
         );
@@ -25,26 +25,17 @@ const Cart = ({ cart, setCart }) => {
 
     return (
         <div className="mt-10 max-w-4xl mx-auto">
-
-            {/* Card */}
             <div className="bg-white p-6 rounded-2xl border border-gray-200">
-
-                {/* Title */}
                 <h2 className="text-lg font-semibold mb-6 text-gray-800">
                     Your Cart
                 </h2>
-
-                {/* Items */}
                 <div className="space-y-4">
                     {cart.map(item => (
                         <div
                             key={item.id}
-                            className="flex justify-between items-center bg-gray-50 px-4 py-3 rounded-xl"
-                        >
-                            {/* Left */}
+                            className="flex justify-between items-center bg-gray-50 px-4 py-3 rounded-xl"                      >
                             <div className="flex items-center gap-3">
-
-                                {/* JSON icon */}
+                             
                                 <img
                                     src={item.icon}
                                     alt={item.name}
@@ -61,7 +52,6 @@ const Cart = ({ cart, setCart }) => {
                                 </div>
                             </div>
 
-                            {/* Right */}
                             <button
                                 onClick={() => handleRemove(item.id)}
                                 className="text-red-500 btn btn-ghost"
