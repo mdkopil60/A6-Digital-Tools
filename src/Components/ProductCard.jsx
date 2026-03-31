@@ -1,42 +1,51 @@
 export default function ProductCard({ product, addToCart, cart }) {
 
-    // check product already added or not
-    const isAdded = cart.find(item => item.id === product.id);
+    const isAdded = cart.some(item => item.id === product.id);
 
     return (
-        <div className="border p-5 rounded-xl shadow hover:shadow-lg">
+        <div className="border p-5 rounded-xl shadow hover:shadow-lg transition duration-300 bg-white">
 
-            <img src={product.icon} className="h-12 mb-3" />
+            <div className="flex items-center justify-between mb-3">
+                <img src={product.icon} alt="icon" className="h-12" />
 
-            <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded">
-                {product.tag}
-            </span>
+                <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded">
+                    {product.tag}
+                </span>
+            </div>
 
-            <h2 className="font-bold mt-2">{product.name}</h2>
+            {/* Title */}
+            <h2 className="font-bold text-lg">{product.name}</h2>
 
-            <p className="text-sm text-gray-500">
+            {/* Description */}
+            <p className="text-sm text-gray-500 mt-1">
                 {product.description}
             </p>
 
-            <h3 className="font-bold">
+            {/* Price */}
+            <h3 className="font-bold mt-3">
                 ${product.price}/{product.period}
             </h3>
 
-            {/* features */}
-            <ul className="text-sm mt-2 mb-3">
+            {/* Features */}
+            <ul className="text-sm mt-2 mb-4 space-y-1">
                 {product.features.map((f, i) => (
                     <li key={i}>✔ {f}</li>
                 ))}
             </ul>
 
-            {/*  Button logic */}
             <button
-                disabled={isAdded}
-                onClick={() => addToCart(product)}
-                className={`w-full rounded-lg 
-                ${isAdded ? "btn btn-success " : "btn btn-primary"}`}
+                onClick={() => {
+                    if (!isAdded) {
+                        addToCart(product);
+                    }
+                }}
+                className={`w-full rounded-lg transition duration-300 
+                ${isAdded
+                        ? "btn btn-success hover:scale-105"
+                        : "btn btn-primary hover:scale-105"
+                    }`}
             >
-                {isAdded ? "Add To Cart" : "Buy Now"}
+                {isAdded ? "Added" : "Buy Now"}
             </button>
 
         </div>
