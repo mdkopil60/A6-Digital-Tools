@@ -32,10 +32,10 @@ function App() {
             <Stats />
             <Steps />
             <div className="flex justify-center gap-4 my-6">
-                <button onClick={() => setView("products")} className="btn btn-soft btn-primary">
+                <button onClick={() => setView("products")} className="btn btn-soft btn-primary rounded-full">
                     Products
                 </button>
-                <button onClick={() => setView("cart")} className="btn btn-soft btn-primary">
+                <button onClick={() => setView("cart")} className="btn btn-soft btn-primary rounded-full">
                     Cart
                 </button>
             </div>
