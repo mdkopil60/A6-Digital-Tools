@@ -17,6 +17,10 @@ function App() {
     const [cart, setCart] = useState([]);
 
     const addToCart = (product) => {
+        const exists = cart.find(item => item.id === product.id);
+        if (exists) {
+            // alert ("Already Added")
+        }
         setCart([...cart, product]);
     };
 
@@ -27,19 +31,17 @@ function App() {
             <Banner />
             <Stats />
             <Steps />
-
             <div className="flex justify-center gap-4 my-6">
-                <button onClick={() => setView("products")} className="btn">
+                <button onClick={() => setView("products")} className="btn btn-soft btn-primary">
                     Products
                 </button>
-                <button onClick={() => setView("cart")} className="btn">
+                <button onClick={() => setView("cart")} className="btn btn-soft btn-primary">
                     Cart
                 </button>
             </div>
-
             {view === "products" ? (
                 <>
-                    <Products products={productsData} addToCart={addToCart} />
+                    <Products products={productsData} addToCart={addToCart} cart={cart} />
                     <Pricing />
                     <CTA />
                     <Footer />

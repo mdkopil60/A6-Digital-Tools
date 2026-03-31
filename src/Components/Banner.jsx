@@ -12,7 +12,9 @@ const Banner = () => {
                 </h1>
 
                 <p className="text-gray-600 mt-4">
-                    Access premium AI tools, design assets, templates, and productivity software—all in one place.
+                    Access premium AI tools, design assets, templates, and productivity
+                    software—all in one place. <br /> Start creating faster today.
+                    Explore Products
                 </p>
 
                 <div className="mt-6 flex gap-4">

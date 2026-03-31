@@ -8,17 +8,20 @@ export default function Steps() {
 
                 <div className="p-6 shadow rounded-xl">
                     <img src="/src/assets/user.png" />
-                    <h3>Create Account</h3>
+                    <h3 className="text-2xl font-bold">Create Account</h3>
+                    <p className="text-gray-600 mt-4">Sign up for free in seconds. No credit card <br />required to get started.</p>
                 </div>
 
                 <div className="p-6 shadow rounded-xl">
                     <img src="/src/assets/package.png" />
-                    <h3>Choose Products</h3>
+                    <h3 className="text-2xl font-bold">Choose Products</h3>
+                    <p className="text-gray-600 mt-4">Browse our catalog and select the tools <br />that fit your needs.</p>
                 </div>
 
                 <div className="p-6 shadow rounded-xl">
                     <img src="/src/assets/rocket.png" />
-                    <h3>Start Creating</h3>
+                    <h3 className="text-2xl font-bold">Start Creating</h3>
+                    <p className="text-gray-600 mt-4">Download and start using your premium <br />tools immediately.</p>
                 </div>
 
             </div>

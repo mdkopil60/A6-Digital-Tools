@@ -7,7 +7,7 @@ const Cart = ({ cart, setCart }) => {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
 
     if (cart.length === 0) {
-        return <h2 className="text-center mt-10">Cart is empty</h2>;
+        return <h2 className="text-center mt-10">Cart is empty</h2>;   
     }
 
     return (
@@ -16,7 +16,7 @@ const Cart = ({ cart, setCart }) => {
             {cart.map(item => (
                 <div key={item.id} className="flex justify-between mb-3">
                     <p>{item.name}</p>
-                    <button onClick={() => handleRemove(item.id)}>
+                    <button className="text-red-500 btn" onClick={() => handleRemove(item.id)}>
                         Remove
                     </button>
                 </div>

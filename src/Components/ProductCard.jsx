@@ -1,4 +1,8 @@
-export default function ProductCard({ product, addToCart }) {
+export default function ProductCard({ product, addToCart, cart }) {
+
+    // check product already added or not
+    const isAdded = cart.find(item => item.id === product.id);
+
     return (
         <div className="border p-5 rounded-xl shadow hover:shadow-lg">
 
@@ -18,11 +22,23 @@ export default function ProductCard({ product, addToCart }) {
                 ${product.price}/{product.period}
             </h3>
 
+            {/* features */}
+            <ul className="text-sm mt-2 mb-3">
+                {product.features.map((f, i) => (
+                    <li key={i}>✔ {f}</li>
+                ))}
+            </ul>
+
+            {/*  Button logic */}
             <button
+                disabled={isAdded}
                 onClick={() => addToCart(product)}
-                className="bg-purple-600 text-white w-full py-2 mt-3 rounded-lg">
-                Buy Now
+                className={`w-full rounded-lg 
+                ${isAdded ? "btn btn-success " : "btn btn-primary"}`}
+            >
+                {isAdded ? "Add To Cart" : "Buy Now"}
             </button>
+
         </div>
     );
 }
