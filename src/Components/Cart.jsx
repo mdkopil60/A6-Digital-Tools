@@ -1,11 +1,15 @@
+import { toast } from "react-toastify";
+
 const Cart = ({ cart, setCart }) => {
 
     const handleRemove = (id) => {
         setCart(cart.filter(item => item.id !== id));
+        toast.info("Remove from Cart")
     };
 
     const handleCheckout = () => {
         setCart([]);
+        toast.success("Checkout Successful")
     };
 
     const total = cart.reduce((sum, item) => sum + item.price, 0);
@@ -13,8 +17,8 @@ const Cart = ({ cart, setCart }) => {
     if (cart.length === 0) {
         return (
             <div className="mt-10 text-center text-gray-500">
-                Your cart is empty
                 <img className="mx-auto w-60 h-60" src="/src/assets/cart-arrow-down.png" alt="" />
+                <h3 className="text-center text-2xl">Your cart is empty</h3>
             </div>
         );
     }

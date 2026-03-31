@@ -45,7 +45,7 @@ export default function ProductCard({ product, addToCart, cart }) {
                         : "btn btn-primary hover:scale-105"
                     }`}
             >
-                {isAdded ? "Added" : "Buy Now"}
+                {isAdded ? "Add To Cart" : "Buy Now"}
             </button>
 
         </div>

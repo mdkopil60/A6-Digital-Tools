@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 
-export default function Products({ products, addToCart, cart}) {
+export default function Products({ products, addToCart, cart }) {
     return (
         <div className="my-16 px-5">
 
@@ -16,7 +16,7 @@ export default function Products({ products, addToCart, cart}) {
                         key={product.id}
                         product={product}
                         addToCart={addToCart}
-                        cart = {cart}
+                        cart={cart}
                     />
                 ))}
             </div>

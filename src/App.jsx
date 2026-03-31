@@ -1,7 +1,6 @@
 import { Suspense, useState } from 'react'
 import './App.css'
 import productsData from "./data/products.json";
-
 import Navbar from './Components/Navbar';
 import Banner from './Components/Banner';
 import Products from './Components/Products';
@@ -11,6 +10,7 @@ import Steps from './Components/Steps';
 import Pricing from './Components/Pricing';
 import CTA from './Components/CTA';
 import Footer from './Components/Footer';
+import { toast, ToastContainer } from 'react-toastify';
 
 function App() {
     const [view, setView] = useState("products");
@@ -19,9 +19,11 @@ function App() {
     const addToCart = (product) => {
         const exists = cart.find(item => item.id === product.id);
         if (exists) {
-            // alert ("Already Added")
+            toast.error("Already Added !");
+            return;
         }
         setCart([...cart, product]);
+        toast.success("Added to Cart !")
     };
 
     return (
@@ -36,7 +38,7 @@ function App() {
                     Products
                 </button>
                 <button onClick={() => setView("cart")} className="btn btn-soft btn-primary rounded-full">
-                    Cart
+                    Cart ({cart.length})
                 </button>
             </div>
             {view === "products" ? (
@@ -50,8 +52,15 @@ function App() {
                 <Cart cart={cart} setCart={setCart} />
             )}
 
+
+
+            <ToastContainer />
         </Suspense>
+
+
+
     );
+
 }
 
 export default App;
