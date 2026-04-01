@@ -18,7 +18,7 @@ const Navbar = ({ cart }) => {
 
             <div className="flex-1 flex justify-end items-center gap-4">
                 <div className="relative">
-                    <img className="w-6 h-6" src="../src/assets/shopping-cart.png" alt="" />
+                    <img className="w-6 h-6" src="./shopping-cart.png" alt="" />
                     <span className="absolute -top-2 -right-2 text-xs w-5 h-5 flex items-center justify-center rounded-full bg-red-500 text-white">
                         {cart.length}
                     </span>

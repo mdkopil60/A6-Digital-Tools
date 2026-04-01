@@ -24,7 +24,7 @@ const Banner = () => {
             </div>
 
             <div className="mt-8 md:mt-0 flex justify-center">
-                <img src="../src/assets/banner.png" className="rounded-lg" />
+                <img src="./banner.png" className="rounded-lg" />
             </div>
         </div>
     );

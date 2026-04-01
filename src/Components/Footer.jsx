@@ -1,3 +1,4 @@
+
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white px-10 py-16">
@@ -49,13 +50,13 @@ const Footer = () => {
                     <h3 className="font-semibold mb-3">Social Links</h3>
                     <div className="flex gap-3">
                         <div className="bg-white w-8 h-8 flex items-center justify-center rounded-full cursor-pointer hover:scale-110 transition shadow-md">
-                            <img src="../src/assets/facebook.png" alt="fb" className="w-4 h-4" />
+                            <img src="./facebook.png" alt="fb" className="w-4 h-4" />
                         </div>
                         <div className="bg-white w-8 h-8 flex items-center justify-center rounded-full cursor-pointer hover:scale-110 transition shadow-md">
-                            <img src="../src/assets/linkedin.png" alt="tw" className="w-4 h-4" />
+                            <img src="./linkedin.png" alt="tw" className="w-4 h-4" />
                         </div>
                         <div className="bg-white w-8 h-8 flex items-center justify-center rounded-full cursor-pointer hover:scale-110 transition shadow-md">
-                            <img src="../src/assets/spotify.png" alt="gh" className="w-4 h-4" />
+                            <img src="./spotify.png" alt="gh" className="w-4 h-4" />
                         </div>
                     </div>
                 </div>
