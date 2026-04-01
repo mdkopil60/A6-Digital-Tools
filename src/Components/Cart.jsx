@@ -17,7 +17,7 @@ const Cart = ({ cart, setCart }) => {
     if (cart.length === 0) {
         return (
             <div className="mt-10 text-center text-gray-500">
-                <img className="mx-auto w-60 h-60" src="../src/assets/cart-arrow-down.png" alt="" />
+                <img className="mx-auto w-60 h-60" src="./cart-arrow-down.png" alt="" />
                 <h3 className="text-center text-2xl">Your cart is empty</h3>
             </div>
         );
